@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DMIR: an Open-Source Dataset for Driver Maneuver Intention Recognition">
+  <meta name="description" content="A Simulation Framework for Deep Learning-based Lane Change Prediction">
 
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="Advanced driver assistance systems, automated driving, dataset, deep learning, lane change prediction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>DMIR</title>
+  <title>Lane Change Prediction</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -38,7 +38,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><span style="color:#004e42">DMIR</span>: an Open-Source Dataset for <br><span style="color:#004e42">D</span>river <span style="color:#004e42">M</span>aneuver <span style="color:#004e42">I</span>ntention <span style="color:#004e42">R</span>ecognition</h1>
+            <h1 class="title is-1 publication-title">A Simulation Framework for Deep Learning-based Lane Change Prediction</h1>
             <div class="is-size-4 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -54,14 +54,14 @@
                 Luca Lazzaroni<sup>1</sup>,
               </span>
               <span class="author-block">
-                Changjae Oh<sup>2</sup>,
+                Hadise Rojhan<sup>1</sup>,
               </span>
               <br>
               <span class="author-block">
-                Alessandro Pighetti<sup>1,2</sup>,
+                Changjae Oh<sup>2</sup>,
               </span>
               <span class="author-block">
-                Hadise Rojhan<sup>1</sup>,
+                Alessandro Pighetti<sup>1,2</sup>,
               </span>
               <span class="author-block">
                 Fabio Tango<sup>3</sup>,
@@ -126,7 +126,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce <b style="color:#004e42">DMIR</b>, a new open-source dataset for driver maneuver intention recognition, with a focus on highway lane changes. Collected in CARLA simulator involving 50 drivers over a 1,500 km route, it provides annotated events with synchronized data on vehicle dynamics, road layout and surrounding traffic. Unlike existing datasets, DMIR is purpose-built for early lane change intention prediction and captures the full ego-vehicle context. Baseline models confirm its potentials to anticipate lane changes well in advance, enabling more proactive and personalised driver-assistance systems.
+           While advanced driving simulations are being increasingly used in automated driving research, free availability of data and development tools is limited. We present a new open-source framework for synthetic data generation for Driver Maneuver Intention Recognition (DMIR), targeting prediction of time-to-lane-change in highways. The framework - built on the CARLA driving simulator – advances the state of the art by including a 50-driver dataset, a large-scale 3D map and code for reproducibility and new data generation. The map features a 60 km-long highway track, with a variety of curvature radii and straight road segment lengths. The code covers both simulation enhancements (e.g., dedicated traffic management, car cockpit, engine noise) and baseline Deep Learning model training and evaluation (including CARLA log post-processing to create the input timeseries). The dataset captures over 3,400 annotated LC maneuvers with synchronized ego-vehicle dynamics, road geometry, and surrounding traffic context. Baseline evaluations with state-of-the-art deep learning models confirm its suitability for vehicular applications. The whole framework is released publicly to further support automated driving research.
           </p>
         </div>
       </div>
