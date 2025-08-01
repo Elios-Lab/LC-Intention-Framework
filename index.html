@@ -6,11 +6,19 @@
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="A Simulation Framework for Deep Learning-based Lane Change Prediction">
 
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elios-lab.github.io/LaneChangeIntentionRecognitionFramework">
+  <meta property="og:title" content="A Simulation Framework for Lane Change Prediction">
+  <meta property="og:description" content="Deep learning-based lane change prediction in a realistic simulated highway environment. Visual clips, metrics, and model comparisons.">
+  <meta property="og:image" content="https://elios-lab.github.io/LaneChangeIntentionRecognitionFramework/static/images/workflow.png">
+  <meta property="og:image:width" content="817">
+  <meta property="og:image:height" content="181">
+
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="Advanced driver assistance systems, automated driving, dataset, deep learning, lane change prediction">
+  <meta name="keywords" content="Driver assistance systems, automated driving, dataset, deep learning, driving simulation, lane change prediction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Lane Change Prediction</title>
+  <title>Lane Change Intention Recognition</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -102,7 +110,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/Elios-Lab/LaneChangeIntentionRecognition" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -118,6 +126,17 @@
   </div>
 </section>
 
+<section class="section hero" style="padding-top: 0;">
+  <div class="container is-max-desktop">
+      <div class="hero-body" style="padding-top: 0; margin-top: 0;padding-bottom: 0;margin-bottom: 0;">
+        <center>
+          <img src="static/images/workflow.png" width="100%">
+        </center>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -126,7 +145,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           While advanced driving simulations are being increasingly used in automated driving research, free availability of data and development tools is limited. We present a new open-source framework for synthetic data generation for Driver Maneuver Intention Recognition (DMIR), targeting prediction of time-to-lane-change in highways. The framework - built on the CARLA driving simulator – advances the state of the art by including a 50-driver dataset, a large-scale 3D map and code for reproducibility and new data generation. The map features a 60 km-long highway track, with a variety of curvature radii and straight road segment lengths. The code covers both simulation enhancements (e.g., dedicated traffic management, car cockpit, engine noise) and baseline Deep Learning model training and evaluation (including CARLA log post-processing to create the input timeseries). The dataset captures over 3,400 annotated LC maneuvers with synchronized ego-vehicle dynamics, road geometry, and surrounding traffic context. Baseline evaluations with state-of-the-art deep learning models confirm its suitability for vehicular applications. The whole framework is released publicly to further support automated driving research.
+            While advanced driving simulations are being increasingly used in automated driving research, free availability of data and development tools is limited. We present a new open-source framework for synthetic data generation for lane change (LC) intention recognition, targeting prediction of time-to-lane-change in highways. The framework – built on the CARLA driving simulator – advances the state-of-the-art by including a 50-driver dataset, a large-scale 3D map and code for reproducibility and new data generation. The map features a 60 km-long highway track, with a variety of curvature radii and straight road segment lengths. The code covers both simulation enhancements (e.g., dedicated traffic management, car cockpit, engine noise) and baseline Deep Learning model training and evaluation (including CARLA log post-processing to create the input timeseries). The dataset captures over 3,400 annotated LC maneuvers with synchronized ego-vehicle dynamics, road geometry, and surrounding traffic context. Baseline evaluations with state-of-the-art deep learning models confirm its suitability for vehicular applications. The whole framework is released publicly to further support automated driving research.
           </p>
         </div>
       </div>
@@ -136,44 +155,81 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
+<!-- Clip demonstrations -->
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths" style="margin-top: 2rem;">
+      <h2 class="title is-3">
+        <img id="painting_icon" src="static/images/sample_clip.png" style="margin-right: 0.5rem;">
+        Sample clips
       </h2>
     </div>
   </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+  <div class="container is-max-desktop is-centered ">
+    <div class="video-quartet" style="margin-top: 0;">
+      <center style="font-weight: bold; font-size: 1.2em;">Straight Segment</center>
+      <div class="video-row">
+        <div class="video-col">
+          <video autoplay muted loop controls playsinline>
+            <source src="static/videos/dmir5.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-col">
+          <video autoplay muted loop controls playsinline>
+            <source src="static/videos/dmir7.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="video-row">
+        <div class="video-col">
+          <video autoplay muted loop controls playsinline>
+            <source src="static/videos/dmir4.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-col">
+          <video autoplay muted loop controls playsinline>
+            <source src="static/videos/dmir10.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <center style="font-weight: bold; font-size: 1.2em;">Hazardous Non-Player Vehicle</center>
+    <div class="video-single">
+      <video autoplay muted loop controls playsinline>
+        <source src="static/videos/dmir9.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-quartet">
+      <center style="font-weight: bold; font-size: 1.2em;">Curved Segment</center>
+      <div class="video-row">
+        <div class="video-col">
+          <video autoplay muted loop controls playsinline>
+            <source src="static/videos/dmir3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-col">
+          <video autoplay muted loop controls playsinline>
+            <source src="static/videos/dmir6.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="video-row">
+        <div class="video-col">
+          <video autoplay muted loop controls playsinline>
+            <source src="static/videos/dmir1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-col">
+          <video autoplay muted loop controls playsinline>
+            <source src="static/videos/dmir12.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End clip demonstration -->
 
 
 
@@ -183,13 +239,14 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3">Full Drive Video</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <video muted controls playsinline>
+              <source src="static/videos/full_run_dmir.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
@@ -198,68 +255,14 @@
 </section>
 <!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
+<!--BibTex citation
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
 </section>
-<!--End BibTex citation -->
+End BibTex citation -->
 
 
   <footer class="footer">
@@ -268,10 +271,8 @@
       <div class="column is-8">
         <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+          <p style="text-align: center;">
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>. <br>
           </p>
 
         </div>
@@ -279,12 +280,6 @@
     </div>
   </div>
 </footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
 
   </body>
   </html>
